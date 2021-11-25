@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    grid: 100px / repeat(2, 1fr 3fr);
+    grid-gap: 10px;
+    // 
+    // 
+    // height: 70vw; // 100% as 100vh
+    // width: 70vw;
+    // height: 70vmin; // smallest size of viewport
+    height: 70vmax;
+    // 
+    >div {
+        background-color: #5d98c0;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        &:nth-child(1) {
+            grid-column: 1 / -1;
+        }
+        &:nth-child(2) {
+            grid-area: 2 / 2 / 5 / 3;
+        }
+        &:nth-child(3) {
+            grid-area: 4 / 4 / 5 / -1;
+        }
+    }
+}
